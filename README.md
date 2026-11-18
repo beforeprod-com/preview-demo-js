@@ -2,9 +2,12 @@
 
 Minimal **Next.js** app that shows [Beforeprod](https://beforeprod.com) preview deployments on every pull request.
 
-Open a PR → GitHub Actions builds the app → Beforeprod spins up an isolated preview → the **HTTPS preview URL is written into the PR description**. Close the PR → the preview is cleaned up.
+Open a PR, GitHub Actions builds the app, Beforeprod spins up an isolated preview, and the **HTTPS preview URL is written into the PR description**. Close the PR and the preview is cleaned up.
 
-Sibling demo (Go): [`preview-demo-go`](https://github.com/beforeprod-com/preview-demo-go)  
+Fork this repo and open a pull request to try it.
+
+Sibling demo (Go): [`preview-demo-go`](https://github.com/beforeprod-com/preview-demo-go)
+
 Action used under the hood: [`preview-deployment-action`](https://github.com/beforeprod-com/preview-deployment-action)
 
 ## Run locally
@@ -16,7 +19,7 @@ npm install
 npm run dev
 ```
 
-Production-style start (port **4522**, Beforeprod’s expected port):
+Production-style start (port **4522**):
 
 ```bash
 npm run build
@@ -39,6 +42,10 @@ When the PR is closed, the cleanup workflow stops the preview app.
 ### Permissions
 
 Deploy workflow needs `pull-requests: write`. Cleanup needs `pull-requests: read`.
+
+## Want this on your repo?
+
+Beforeprod is in early access. [Request access on beforeprod.com](https://beforeprod.com/?ref=demo-js)
 
 ## Learn more
 
